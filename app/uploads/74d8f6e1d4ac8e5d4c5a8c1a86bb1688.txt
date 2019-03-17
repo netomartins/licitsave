@@ -1,0 +1,30 @@
+alterar senha de usuario
+escreve no tcc que a senha é armazenada no banco criptografada md5
+
+referencial adicionar cripgrafia e md5
+
+erro em portugues
+
+descrever que o so no sistema a intidade, junto com a cidade para identificar, ou coloque no projeto que e so para prefeitura
+
+
+colcoar um box em modalidade para identificar e eliminar a chance e erro de digitação
+
+
+na frente de objeto colocar descrição em parentese
+
+criar forma de eliminar repedição de registro
+
+restringir arquivo de upload
+
+
+colocar na tela inicial editais abertos
+
+
+Documentos da empresa para Pasta de Licitação com validade do documento, gerar botao para montar pasta
+cada documento com data de geração e vencimento
+
+contrato sem prazo final
+cnd 30 dias
+cndt 30 dias
+municipal 30 dias

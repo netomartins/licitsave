@@ -1,0 +1,23 @@
+[24-Feb-2017 12:54:32 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/index.php:39) in /home/sendu582/public_html/painel/index.php on line 44
+[24-Feb-2017 12:54:49 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/index.php:39) in /home/sendu582/public_html/painel/index.php on line 44
+[24-Feb-2017 12:58:10 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/index.php:39) in /home/sendu582/public_html/painel/index.php on line 44
+[24-Feb-2017 13:00:33 America/Chicago] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/sendu582/public_html/painel/index.php on line 45
+[24-Feb-2017 13:00:44 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/index.php:39) in /home/sendu582/public_html/painel/index.php on line 43
+[24-Feb-2017 13:01:14 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/index.php:39) in /home/sendu582/public_html/painel/index.php on line 50
+[24-Feb-2017 13:02:51 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/index.php:39) in /home/sendu582/public_html/painel/index.php on line 50
+[24-Feb-2017 13:03:28 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/sendu582/public_html/painel/index.php on line 44
+[24-Feb-2017 13:03:53 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/sendu582/public_html/painel/index.php on line 44
+[24-Feb-2017 13:03:55 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/sendu582/public_html/painel/index.php on line 44
+[20-Mar-2017 02:46:48 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, array given in /home/sendu582/public_html/painel/valida.php on line 7
+[20-Mar-2017 02:46:48 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/valida.php:7) in /home/sendu582/public_html/painel/valida.php on line 57
+[20-Mar-2017 02:46:48 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, array given in /home/sendu582/public_html/painel/valida.php on line 7
+[20-Mar-2017 02:46:48 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/valida.php:7) in /home/sendu582/public_html/painel/valida.php on line 57
+[20-Mar-2017 02:46:48 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, array given in /home/sendu582/public_html/painel/valida.php on line 8
+[20-Mar-2017 02:46:48 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/valida.php:8) in /home/sendu582/public_html/painel/valida.php on line 57
+[20-Mar-2017 02:46:51 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, array given in /home/sendu582/public_html/painel/valida.php on line 8
+[20-Mar-2017 02:46:51 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/sendu582/public_html/painel/valida.php:8) in /home/sendu582/public_html/painel/valida.php on line 57
+[24-Apr-2017 22:25:15 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2005): Unknown MySQL server host 'localhostt' (0) in /home/sendu582/public_html/painel/conexao.php on line 8
+[24-Apr-2017 22:36:54 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2005): Unknown MySQL server host 'localhostt' (0) in /home/sendu582/public_html/painel/conexao.php on line 8
+[02-May-2017 21:04:31 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/sendu582/public_html/painel/conexao.php on line 8
+[02-May-2017 21:04:44 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/sendu582/public_html/painel/conexao.php on line 8
+[02-May-2017 21:04:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/sendu582/public_html/painel/conexao.php on line 8
