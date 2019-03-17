@@ -9,7 +9,7 @@ include_once("../conexao.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>LicitSave - Painel de Controle</title>
+  <title>LicitSave</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -156,11 +156,11 @@ include_once("../conexao.php");
     <section class="content-header">
       <h1>
         LicitSave
-        <small>Painel de Controle</small>
+        <small>Nova Licitação</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li><a href="index"><i class="fa fa-dashboard"></i>Home </a></li>
+        <li class="active"></li>
       </ol>
     </section>
 
@@ -244,6 +244,7 @@ include_once("../conexao.php");
 					   <option value=""> </option>
 					  <option value="Pregão Presencial">Pregão Presencial</option>
 					  <option value="Pregão Eletrônico">Pregão Eletrônico</option>
+					  <option value="Leilão">Registro de Preços</option>
 					  <option value="Concorrência">Concorrência</option>	
 					  <option value="Tomada de Preços">Tomada de Preços</option>	
 					  <option value="Convite">Convite</option>

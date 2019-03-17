@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="licitsave@localhost" uuid="d848c47d-c4b5-4300-88b3-ad3e1833686f">
+    <data-source source="LOCAL" name="licitsave@localhost" uuid="00a78e9d-2a07-491f-ad7c-635c5d2b5bff">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

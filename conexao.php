@@ -1,8 +1,8 @@
 <?php
 	$servidor = "localhost";
-	$usuario = "neto";
-	$senha = "12345";
-	$dbname = "licitsave";
+	$usuario = "root";
+	$senha = "";
+	$dbname = "licitsave_final";
 	
 	//Criar a conexao
 	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);

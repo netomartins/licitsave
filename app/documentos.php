@@ -9,7 +9,7 @@ include_once("../conexao.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>LicitSave - Painel de Controle</title>
+  <title>LicitSave</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -23,11 +23,6 @@ include_once("../conexao.php");
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="plugins/morris/morris.css">
-  <!-- jvectormap -->
   <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Date Picker -->
   <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
@@ -152,11 +147,11 @@ include_once("../conexao.php");
     <section class="content-header">
       <h1>
         LicitSave
-        <small>Painel de Controle</small>
+        <small>Documentos da Empresa</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li><a href="index"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li class="active"></li>
       </ol>
     </section>
 
@@ -327,7 +322,7 @@ include_once("../conexao.php");
         <div class="col-md-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Documentos</h3>
+              <h3 class="box-title">Documentos de Habilitação da Empresa</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>

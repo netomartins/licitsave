@@ -2,6 +2,7 @@
 session_start();
 require '../check.php';
 include_once("../conexao.php");	
+//error_reporting(0);
 
 ?>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ include_once("../conexao.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>LicitSave - Painel de Controle</title>
+  <title>LicitSave</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -53,16 +54,17 @@ include_once("../conexao.php");
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>L</b>icit</span>
+     <span class="logo-mini"><b>L</b>icit</span>
+        <img src="../imagens/licitacao2.jpg" width="45" height="45" class="img-circle" alt="User Image"> <b>Licit</b>Save</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Licit</b>Save</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <a href="index.php" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
 
@@ -79,13 +81,13 @@ include_once("../conexao.php");
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../imagens/usuario.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $_SESSION['usuarioNome']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../imagens/usuario.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   <?php echo $_SESSION['usuarioNome']; ?>
@@ -116,7 +118,7 @@ include_once("../conexao.php");
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../imagens/usuario.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $_SESSION['usuarioNome']; ?></p>
@@ -129,16 +131,17 @@ include_once("../conexao.php");
         <li class="header">MENU NAVEGAÇÃO</li>
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Licitações</span>
+            <i class="fa fa-gavel"></i> <span>Licitações</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.php"><i class="fa fa-envelope"></i> Inserir Licitação</a></li>
-            <li class="active"><a href="licitacoes.php"><i class="fa fa-envelope"></i> Visualizar Licitações</a></li>
+            <li><a href="novalicitacao.php"><i class="fa fa-plus-circle"></i> Nova Licitação</a></li>
+            <li class="active"><a href="licitacoes.php"><i class="fa fa-search"></i> Buscar Licitações</a></li>
           </ul>
-		  <li><a href="usuarios.php"><i class="fa fa-dashboard"></i> Usuários</a></li>
+		  <li><a href="usuarios.php"><i class="fa fa-user-circle"></i> Usuários</a></li>
+		  <li><a href="documentos.php"><i class="fa fa-book"></i> Documentos da Empresa</a></li>
 		  <li><a href="../logout.php"><i class="fa fa-times"></i> Sair</a></li>
         </li>
       </ul>
@@ -152,11 +155,11 @@ include_once("../conexao.php");
     <section class="content-header">
       <h1>
         LicitSave
-        <small>Painel de Controle</small>
+        <small>Arquivo da Licitação</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li><a href="index"><i class="fa fa-dashboard"></i> Home</a></li>
+       
       </ol>
     </section>
 
@@ -169,37 +172,7 @@ include_once("../conexao.php");
         <!-- ./col -->
       
         <!-- ./col -->
-     <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-orange">
-           <div class="inner">
-              <p style="font-size: 25px;">Estatística</p>
-
-              <p>
-			  Total de Licitações: 
-				<span id="contador">
-					<?php 
-						$result_usuario = "SELECT count(*) as Total FROM licitacao ";
-						$resultado_usuario = mysqli_query($conn, $result_usuario);
-						$resultado = mysqli_fetch_assoc($resultado_usuario);						
-						//$num = $resultado['envios'];
-						echo $resultado['Total']; 
-						//echo "<br>Limite: <span>∞</span>";
-						
-					?>
-				</span>
-			  
-			  
-			  
-			  </p>
-			  
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            
-          </div>
-        </div>
+     
         <!-- ./col -->
        
         <!-- ./col -->
@@ -218,7 +191,7 @@ include_once("../conexao.php");
 		<div class="col-md-12">
 		<div class="box box-info">
             <div class="box-header">
-              <i class="fa fa-envelope"></i>
+              <i class="fa fa-gavel"></i>
 
               <h3 class="box-title">Licitação Nº <?php 
 								$id = $_GET['id'];
@@ -315,6 +288,24 @@ include_once("../conexao.php");
                                     </div>
 
                                 </div>
+								
+								
+								<div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Entidade:</label>
+                                        <input type="text" class="form-control" id="cad_licita_entidade" name="cad_licita_entidade" placeholder="<?php 
+								$id = $_GET['id'];
+								$result_usuario = "SELECT * FROM licitacao WHERE id = '$id'";
+								$resultado_usuario = mysqli_query($conn, $result_usuario);
+								$resultado = mysqli_fetch_assoc($resultado_usuario);						
+								echo $resultado['entidade']; 
+								?>" disabled>
+                                    </div>
+
+                                </div>
+								
+								
 
                                 <div class="col-md-4">
 
@@ -366,7 +357,7 @@ include_once("../conexao.php");
             <div class="box-body">
 			<form method="POST" enctype="multipart/form-data">
 				<div class="form-group">
-                  <label for="exampleInputEmail1">Nº Edital / Nº Contrato</label>
+                  <label for="exampleInputEmail1">Nº Edital - Entidade</label>
                   <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição do Arquivo" required>
                 </div>
 				<div class="form-group">
@@ -382,8 +373,11 @@ include_once("../conexao.php");
 
 
     <?php
-      if(isset($_FILES['fileUpload']))
+      //$ext2 = strtolower(substr($_FILES['fileUpload']['name'],-4));
+	  if(isset($_FILES['fileUpload']))
    {
+	   $ext2 = strtolower(substr($_FILES['fileUpload']['name'],-4));
+	   if($ext2 == ".pdf"){
       date_default_timezone_set("Brazil/East"); //Definindo timezone padrão
 
       $ext = strtolower(substr($_FILES['fileUpload']['name'],-4)); //Pegando extensão do arquivo
@@ -396,6 +390,10 @@ include_once("../conexao.php");
 	  $descricao = $_POST['descricao'];
 		  $sql = "INSERT INTO arquivos(descricao, id_licitacao, nome_arquivo, tipo) VALUES ('$descricao', $id_licita,'$new_name','$tipo_doc')";
 		$conn->query($sql);
+	   }
+   else {
+	   echo "Extensão $ext2 não permitida!";
+   }
 
    }
 	  
@@ -424,7 +422,7 @@ include_once("../conexao.php");
 		  
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Arquivos da Licitação Nº <?php 
+              <h3 class="box-title">Arquivo da Licitação Nº <?php 
 								$id = $_GET['id'];
 								$result_usuario = "SELECT * FROM licitacao WHERE id = '$id'";
 								$resultado_usuario = mysqli_query($conn, $result_usuario);
@@ -560,7 +558,7 @@ include_once("../conexao.php");
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2017 <a href="#">LicitSave</a>.</strong> All rights
+    <strong>Copyright &copy; 2018 <a href="#">LicitSave</a>.</strong> All rights
     reserved.
   </footer>
 

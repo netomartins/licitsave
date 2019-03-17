@@ -101,7 +101,7 @@ function submitForm(){
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    //submitMSG(true, "Mensagem Enviada :)");
+    //submitMSG(true, "Licitação Salva:)");
 }
 
 function formError(){

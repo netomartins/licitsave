@@ -4,7 +4,7 @@ $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
-        submitMSG(false, "Did you fill in the form properly?");
+        submitMSG(false, "Você preencheu o formulário corretamente?");
     } else {
         // everything looks good!
         event.preventDefault();
@@ -24,6 +24,8 @@ function submitForm(){
     var cad_licita_numedital = $("#cad_licita_numedital").val();
     var cad_licita_objeto = $("#cad_licita_objeto").val();
     var cad_licita_modalidade = $("#cad_licita_modalidade").val();
+    var cad_licita_data = $("#cad_licita_data").val();
+    var cad_licita_entidade = $("#cad_licita_entidade").val();
     var cad_licita_cidade = $("#cad_licita_cidade").val();
 	/**
 	var modelo = $("#modelo").val();
@@ -45,7 +47,7 @@ function submitForm(){
     $.ajax({
         type: "POST",
         url: "php/form-process.php",
-        data: "cad_licita_ano=" + cad_licita_ano + "&cad_licita_numprocesso=" + cad_licita_numprocesso + "&cad_licita_numedital=" + cad_licita_numedital + "&cad_licita_objeto=" + cad_licita_objeto + "&cad_licita_modalidade=" + cad_licita_modalidade + "&cad_licita_cidade=" + cad_licita_cidade,
+        data: "cad_licita_ano=" + cad_licita_ano + "&cad_licita_numprocesso=" + cad_licita_numprocesso + "&cad_licita_entidade=" + cad_licita_entidade + "&cad_licita_data=" + cad_licita_data + "&cad_licita_numedital=" + cad_licita_numedital + "&cad_licita_objeto=" + cad_licita_objeto + "&cad_licita_modalidade=" + cad_licita_modalidade + "&cad_licita_cidade=" + cad_licita_cidade,
         success : function(text){
 			tmp=text.split('|');
 			//console.log('success');
@@ -101,8 +103,8 @@ function submitForm(){
 }
 
 function formSuccess(){
-    $("#contactForm")[0].reset();
-    submitMSG(true, "Mensagem Enviada :)");
+    //$("#contactForm")[0].reset();
+    submitMSG(true, "Licitação Salva:)");
 }
 
 function formError(){
