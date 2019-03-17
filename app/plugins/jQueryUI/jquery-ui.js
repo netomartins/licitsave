@@ -2789,7 +2789,7 @@ $.widget( "ui.autocomplete", {
 		focus: null,
 		open: null,
 		response: null,
-		Buscar: null,
+		search: null,
 		select: null
 	},
 

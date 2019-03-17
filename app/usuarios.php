@@ -51,17 +51,16 @@ include_once("../conexao.php");
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.php" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>L</b>icit</span>
-        <img src="../imagens/licitacao2.jpg" width="45" height="45" class="img-circle" alt="User Image"> <b>Licit</b>Save</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Licit</b>Save</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="index.php" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
 
@@ -78,13 +77,13 @@ include_once("../conexao.php");
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../imagens/usuario.jpg" class="user-image" alt="User Image">
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $_SESSION['usuarioNome']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../imagens/usuario.jpg" class="user-image" alt="User Image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   <?php echo $_SESSION['usuarioNome']; ?>
@@ -115,7 +114,7 @@ include_once("../conexao.php");
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../imagens/usuario.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $_SESSION['usuarioNome']; ?></p>
@@ -128,17 +127,16 @@ include_once("../conexao.php");
         <li class="header">MENU NAVEGAÇÃO</li>
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-gavel"></i> <span>Licitações</span>
+            <i class="fa fa-dashboard"></i> <span>Licitações</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="novalicitacao.php"><i class="fa fa-plus-circle"></i> Nova Licitação</a></li>
-            <li><a href="licitacoes.php"><i class="fa fa-search"></i>Buscar Licitação</a></li>
+            <li><a href="index.php"><i class="fa fa-envelope"></i> Inserir Licitação</a></li>
+            <li><a href="licitacoes.php"><i class="fa fa-envelope"></i> Visualizar</a></li>
           </ul>
-		  <li class="active"><a href="usuarios.php"><i class="fa fa-user-circle"></i> Usuários</a></li>
-		  <li><a href="documentos.php"><i class="fa fa-book"></i> Documentos da Empresa</a></li>
+		  <li class="active"><a href="usuarios.php"><i class="fa fa-dashboard"></i> Usuários</a></li>
 		  <li><a href="../logout.php"><i class="fa fa-times"></i> Sair</a></li>
         </li>
       </ul>
@@ -166,7 +164,34 @@ include_once("../conexao.php");
       <div class="row">
        <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          
+          <div class="small-box bg-orange">
+           <div class="inner">
+              <p style="font-size: 25px;">Estatística</p>
+
+              <p>
+			  Total de Licitações: 
+				<span id="contador">
+					<?php 
+						$result_usuario = "SELECT count(*) as Total FROM licitacao ";
+						$resultado_usuario = mysqli_query($conn, $result_usuario);
+					$resultado = mysqli_fetch_assoc($resultado_usuario);
+						//$num = $resultado['envios'];
+					echo $resultado['Total'];
+						//echo "<br>Limite: <span>∞</span>";
+						
+					?>
+				</span>
+			  
+			  
+			  
+			  </p>
+			  
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            
+          </div>
         </div>
         <!-- ./col -->
       
@@ -294,8 +319,8 @@ include_once("../conexao.php");
                 <thead>
                 <tr>
                   <th style="text-align: center;">ID</th>
-				  <th style="text-align: center;">Nome</th>
-                  <th style="text-align: center;">Email</th>                  
+				  <th style="text-align: center;">Para</th>
+                  <th style="text-align: center;">Data/Hora</th>                  
                   
                 </tr>
                 </thead>
@@ -324,8 +349,8 @@ include_once("../conexao.php");
                 <tfoot>
                 <tr>
                   <th style="text-align: center;">ID</th>
-				  <th style="text-align: center;">Nome</th>
-                  <th style="text-align: center;">Email</th>                  
+				  <th style="text-align: center;">Para</th>
+                  <th style="text-align: center;">Data/Hora</th>                  
                   
                 </tr>
                 </tfoot>
@@ -348,7 +373,7 @@ include_once("../conexao.php");
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2018 <a href="#">LicitSave</a>.</strong> All rights
+    <strong>Copyright &copy; 2017 <a href="#">LicitSave</a>.</strong> All rights
     reserved.
   </footer>
 

@@ -9,7 +9,7 @@ include_once("../conexao.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>PetShop - Painel de Controle</title>
+  <title>LicitSave - Painel de Controle</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -52,10 +52,10 @@ include_once("../conexao.php");
   <header class="main-header">
     <!-- Logo -->
 
-    <a href="index.php" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>P</b>et</span>
-        <img src="../imagens/logo.jpg" width="45" height="45" class="img-circle" alt="User Image"> <b>Pet</b>Shop</span>
+      <span class="logo-mini"><b>L</b>icit</span>
+        <img src="../imagens/licitacao2.jpg" width="45" height="45" class="img-circle" alt="User Image"> <b>Licit</b>Save</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
 
@@ -65,8 +65,8 @@ include_once("../conexao.php");
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="index.php" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-       
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
       </a>
 
       <div class="navbar-custom-menu">
@@ -82,13 +82,13 @@ include_once("../conexao.php");
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../imagens/usuario.jpg" class="user-image" alt="User Image">
+              <img src="../imagens/licit.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php echo $_SESSION['usuarioNome']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../imagens/usuario.jpg" class="img-circle" alt="User Image">
+                <img src="../imagens/licit.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   <?php echo $_SESSION['usuarioNome']; ?>
@@ -119,7 +119,7 @@ include_once("../conexao.php");
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../imagens/usuario.jpg" class="img-circle" alt="User Image">
+          <img src="../imagens/licit.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $_SESSION['usuarioNome']; ?></p>
@@ -132,17 +132,16 @@ include_once("../conexao.php");
         <li class="header">MENU NAVEGAÇÃO</li>
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-gavel"></i> <span>Clientes</span>
+            <i class="fa fa-dashboard"></i> <span>Licitações</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li ><a href="novalicitacao.php"><i class="fa fa-plus-circle"></i> Novo Cliente</a></li>
-            <li><a href="./"><i class="fa fa-search"></i> Gerenciar Cliente</a></li>
+            <li class="active"><a href="index.php"><i class="fa fa-envelope"></i> Inserir Licitação</a></li>
+            <li><a href="licitacoes.php"><i class="fa fa-envelope"></i> Visualizar</a></li>
           </ul>
-		  <li><a href="./"><i class="fa fa-user-circle"></i> Controle de Estoque</a></li>
-		  <li><a href="./"><i class="fa fa-book"></i> Agendar Serviço</a></li>
+		  <li><a href="usuarios.php"><i class="fa fa-dashboard"></i> Usuários</a></li>
 		  <li><a href="../logout.php"><i class="fa fa-times"></i> Sair</a></li>
         </li>
       </ul>
@@ -155,11 +154,11 @@ include_once("../conexao.php");
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        PetShop
+        LicitSave
         <small>Painel de Controle</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -169,29 +168,169 @@ include_once("../conexao.php");
       <!-- Small boxes (Stat box) -->
       <div class="row">
         
-        <!-- ./estatistica -->
+        <!-- ./col -->
       
-        
+        <!-- ./col -->
+     <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-orange">
+            <div class="inner">
+              <p style="font-size: 25px;">Estatística</p>
+
+              <p>
+			  Total de Licitações: 
+				<span id="contador">
+					<?php 
+						$result_usuario = "SELECT count(*) as Total FROM licitacao ";
+						$resultado_usuario = mysqli_query($conn, $result_usuario);
+						$resultado = mysqli_fetch_assoc($resultado_usuario);
+						//$num = $resultado['envios'];
+						echo $resultado['Total'];
+						//echo "<br>Limite: <span>∞</span>";
+						
+					?>
+				</span>
+			  
+			  
+			  
+			  </p>
+			  
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            
+          </div>
+        </div>
+        <!-- ./col -->
        
         <!-- ./col -->
       </div>
-	  
-	  
-	  <div class="row">
-        <div class="col-md-12">
-          
-          <!-- /.box -->
-        
-        <!-- /.col -->
-      
-	  
-	  
-	  <div class="row">
+      <!-- /.row -->
+      <!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+		<div class="col-md-12">
+		<div class="box box-info">
+            <div class="box-header">
+              <i class="fa fa-envelope"></i>
 
-        <!-- /.col -->
+              <h3 class="box-title">Inserir Nova Licitação</h3>
+              <!-- tools box -->
+              <div class="pull-right box-tools">
+                
+				  <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
+                  <i class="fa fa-minus"></i></button>
+              </div>
+              <!-- /. tools -->
+            </div>
+            <div class="box-body">
+		<div class="col-md-12">
+
+                        <form role="form" id="contactForm" data-toggle="validator" class="shake">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Ano:</label>
+                                        <input type="text" class="form-control" id="cad_licita_ano" name="cad_licita_ano" placeholder="Informe o Ano" required="">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Nº Processo:</label>
+                                        <input type="text" class="form-control" id="cad_licita_numprocesso" name="cad_licita_numprocesso" placeholder="Informe o Nº do Processo" required="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Nº Edital:</label>
+                                        <input type="text" class="form-control" id="cad_licita_numedital" name="cad_licita_numedital" placeholder="Informe o Nº do Edital" required="">
+                                    </div>
+
+                                </div>
+                            </div>
+							
+							<div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Objeto:</label>
+                                        <input type="text" class="form-control" id="cad_licita_objeto" name="cad_licita_objeto" placeholder="Informe o Objeto" required="">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Modalidade:</label>
+                                        <input type="text" class="form-control" id="cad_licita_modalidade" name="cad_licita_modalidade" placeholder="Informe a Modalidade" required="">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label>Cidade:</label>
+                                        <input type="text" class="form-control" id="cad_licita_cidade" name="cad_licita_cidade" placeholder="Informe a Cidade" required="">
+                                    </div>
+
+                                </div>
+								
+                            </div>
+							<button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">
+								<i class="fa fa-arrow-circle-right" id="seta_btnenviar"></i>
+								<img id="gif" src="http://1opmgif057j3093j-zippykid.netdna-ssl.com/wp-content/themes/Extra/images/loading.gif" style="width:0px; visibility: hidden;">
+								Enviar
+							</button>
+							<div id="msgSubmit" ></div>
+							
+                            
+
+                            
+
+
+
+                    </form></div>
+					</div>
+					</div>
+					</div>
+					<!-- Trigger the modal with a button -->
+					<!-- Modal -->
+					<div id="myModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Informação</h4>
+						  </div>
+						  <div class="modal-body">
+							<p>Licitação Salva.</p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+						  </div>
+						</div>
+
+					  </div>
+					</div>
+					
+			
      
-	  
-     
+        
+        
+        <!-- right col -->
+      </div>
+      <!-- /.row (main row) -->
 	  
 	  
     </section>
@@ -202,7 +341,7 @@ include_once("../conexao.php");
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2018 <a href="#">PetShop</a>.</strong> All rights
+    <strong>Copyright &copy; 2017 <a href="#">LicitSave</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -413,7 +552,7 @@ include_once("../conexao.php");
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
@@ -429,20 +568,6 @@ include_once("../conexao.php");
 <script>
   $(function () {
     $("#example1").DataTable({
-	  "order": [[ 0, "desc" ]],
-	  "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true
-    });
-  });
-</script>
-
-<script>
-  $(function () {
-    $("#example2").DataTable({
 	  "order": [[ 0, "desc" ]],
 	  "paging": true,
       "lengthChange": true,

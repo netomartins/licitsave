@@ -10,6 +10,7 @@ require_once 'functions.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
+    <meta name="author" content="Cesar Szpak">
     <link rel="icon" href="imagens/favicon.ico">
     <?php 
         	if (isLoggedIn()): 
@@ -29,7 +30,7 @@ require_once 'functions.php';
         	endif; 
         ?>
 
-    <title>PetShop | Login</title>
+    <title>LicitSave | Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">

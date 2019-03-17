@@ -11074,7 +11074,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Próximo",
+				"sNext": "Next",
 	
 	
 				/**
@@ -11097,7 +11097,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Anterior"
+				"sPrevious": "Previous"
 			},
 	
 			/**
@@ -11152,7 +11152,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Mostrando _START_ de _END_ total _TOTAL_ registros",
+			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
 	
 	
 			/**
@@ -11313,7 +11313,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Mostrar _MENU_ registros",
+			"sLengthMenu": "Show _MENU_ entries",
 	
 	
 			/**
@@ -11393,7 +11393,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Buscar:",
+			"sSearch": "Search:",
 	
 	
 			/**

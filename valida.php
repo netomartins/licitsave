@@ -48,8 +48,8 @@
 		//redireciona o usuario para a página de login
 			}else{	
 			//Váriavel global recebendo a mensagem de erro
-			$_SESSION['loginErro'] = "Seus Créditos ACABARAM!";
-			header("Location: index.php");
+			//$_SESSION['loginErro'] = "Seus Créditos ACABARAM!";
+			//header("Location: index.php");
 		}
 		}else{	
 			//Váriavel global recebendo a mensagem de erro

@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>PetShop</title>
+  <title>LicitSave</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -35,7 +35,7 @@
 
 
 
-    <img src="imagens/logo.jpg" width="120" height="120"class="img-circle" alt="logo"><b>Pet</b>Shop
+    <img src="imagens/licitacao2.jpg" width="120" height="120"class="img-circle" alt="logo"><b>Licit</b>Save
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
