@@ -2,12 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ 
 }
 
 html, body {
   /*font-size: 62.5%;*/
   height: 100%;
   overflow: hidden;
+  background-image: url(../imagens/op.jpg);
+  
 }
 @media (max-width: 768px) {
   html, body {
